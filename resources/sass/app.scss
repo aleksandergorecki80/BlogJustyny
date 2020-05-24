@@ -4,5 +4,18 @@
 // Variables
 @import 'variables';
 
+
+// Font awsome
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/regular";
+@import "~@fortawesome/fontawesome-free/scss/solid";
+
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+// Custom
+@import 'custom';
+
+// Dashboard
+@import 'dashboard';
+

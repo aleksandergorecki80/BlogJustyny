@@ -97,7 +97,7 @@ export default {
         name: "",
         content: ""
       },
-      sitekey: "6Lf36_UUAAAAAPMgukyH86oxa4i-xSA8QOOVy2F5",
+      sitekey: "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI",
       sending: null,
       sucessfulServerResponse: "",
       information: "Your message has been sent.",

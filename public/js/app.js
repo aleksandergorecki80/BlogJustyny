@@ -2151,7 +2151,7 @@ __webpack_require__.r(__webpack_exports__);
         name: "",
         content: ""
       },
-      sitekey: "6Lf36_UUAAAAAPMgukyH86oxa4i-xSA8QOOVy2F5",
+      sitekey: "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI",
       sending: null,
       sucessfulServerResponse: "",
       information: "Your message has been sent.",
@@ -2738,6 +2738,17 @@ __webpack_require__.r(__webpack_exports__);
     },
     placeholderInRow: function placeholderInRow(row) {
       return this.columns - this.postsInRow(row).length;
+    },
+    getWindowWidth: function getWindowWidth(event) {
+      if (document.documentElement.clientWidth < 576) {
+        this.columns = 1;
+      } else if (document.documentElement.clientWidth < 768) {
+        this.columns = 2;
+      } else {
+        this.columns = 3;
+      }
+
+      this.windowWidth = document.documentElement.clientWidth;
     }
   },
   beforeCreate: function beforeCreate() {
@@ -2768,6 +2779,11 @@ __webpack_require__.r(__webpack_exports__);
   // },
   mounted: function mounted() {
     this.id = null;
+    this.$nextTick(function () {
+      window.addEventListener("resize", this.getWindowWidth); //Init
+
+      this.getWindowWidth();
+    });
   } // beforeDestroy(){
   //     console.log('before destroy');
   // },
@@ -2789,8 +2805,6 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _PostListItem__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./PostListItem */ "./resources/js/posts/PostListItem.vue");
-//
-//
 //
 //
 //
@@ -2837,6 +2851,17 @@ __webpack_require__.r(__webpack_exports__);
     },
     placeholderInRow: function placeholderInRow(row) {
       return this.columns - this.postsInRow(row).length;
+    },
+    getWindowWidth: function getWindowWidth(event) {
+      if (document.documentElement.clientWidth < 576) {
+        this.columns = 1;
+      } else if (document.documentElement.clientWidth < 768) {
+        this.columns = 2;
+      } else {
+        this.columns = 3;
+      }
+
+      this.windowWidth = document.documentElement.clientWidth;
     }
   },
   beforeCreate: function beforeCreate() {
@@ -2870,6 +2895,11 @@ __webpack_require__.r(__webpack_exports__);
   // },
   mounted: function mounted() {
     this.id = null;
+    this.$nextTick(function () {
+      window.addEventListener("resize", this.getWindowWidth); //Init
+
+      this.getWindowWidth();
+    });
   } // beforeDestroy(){
   //     console.log('before destroy');
   // },
@@ -2949,7 +2979,7 @@ __webpack_require__.r(__webpack_exports__);
         content: null,
         post_id: this.$route.params.id
       },
-      sitekey: "6Lf36_UUAAAAAPMgukyH86oxa4i-xSA8QOOVy2F5",
+      sitekey: "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI",
       errors: null,
       sending: false,
       success: false,
@@ -7707,7 +7737,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.review-form[data-v-06d06501] {\r\n  padding: 1.25em;\n}\r\n", ""]);
+exports.push([module.i, "\n.review-form[data-v-06d06501] {\r\n  padding: 1.25em;\n}\r\n\r\n", ""]);
 
 // exports
 
@@ -61627,7 +61657,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", [
     _vm.loading
-      ? _c("div", [_vm._v("\n        Data is loading...\n    ")])
+      ? _c("div", [_vm._v("Data is loading...")])
       : _c(
           "div",
           _vm._l(_vm.rows, function(row) {
@@ -61690,12 +61720,10 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", [
     _vm.loading
-      ? _c("div", [_vm._v("\n        Data is loading...\n    ")])
+      ? _c("div", [_vm._v("Data is loading...")])
       : _c("div", [
           _vm.message
-            ? _c("div", [
-                _vm._v("\n            " + _vm._s(_vm.message) + "\n        ")
-              ])
+            ? _c("div", [_vm._v(_vm._s(_vm.message))])
             : _c(
                 "div",
                 _vm._l(_vm.rows, function(row) {
