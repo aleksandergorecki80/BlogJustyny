@@ -57,23 +57,10 @@ export default {
     }
   },
   beforeCreate() {
-    // console.log('beforeCreate');
     this.id = this.$route.params.id;
   },
   created() {
     this.loading = true;
-
-    //      ------  PROMISE EXAMPLE
-    // const promise = new Promise((resolve, reject)=>{
-    //     // console.log(resolve);
-    //     // console.log(reject);
-    //     setTimeout(() => resolve('hello'), 3000);
-    // })
-    // .then((result) => `Hello again ${result} `)
-    // .then((result) => {console.log(`Success ${result}`)})
-    // .catch((result) =>{console.log(`Error ${result}`)});
-    // console.log(promise);
-
     const request = axios
       .get(`/api/categories/${this.$route.params.id}`)
       .then(response => {
@@ -82,22 +69,12 @@ export default {
       });
   },
 
-  // beforeMount(){
-  //     console.log('before mount');
-  // },
   mounted() {
     this.id = null;
-        this.$nextTick(function() {
-        window.addEventListener("resize", this.getWindowWidth);
-      //Init
+    this.$nextTick(function() {
+      window.addEventListener("resize", this.getWindowWidth);
       this.getWindowWidth();
     });
   }
-  // beforeDestroy(){
-  //     console.log('before destroy');
-  // },
-  // destroyed(){
-  //     console.log('destroyed');
-  // }
 };
 </script>

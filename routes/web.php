@@ -48,3 +48,10 @@ Route::get('/home', 'HomeController@index');
 // reCapcha
 // Route::get('captcha-form', 'CaptchaController@captchaForm');
 // Route::post('store-captcha-form', 'CaptchaController@storeCaptchaForm');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

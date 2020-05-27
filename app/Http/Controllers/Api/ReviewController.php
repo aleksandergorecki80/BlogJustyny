@@ -29,16 +29,11 @@ class ReviewController extends Controller
             'post_id' => 'required'
         ]);
 
-
-        // $token = $request->recaptchaToken;
-        // return $data;
-
         $token = $request->recaptchaToken;
-        // return $token;
 
         if ($token) {
 
-
+            
             $client = new Client([
                 'base_uri' => 'https://google.com/recaptcha/api/',
                 'timeout' => 2.0
@@ -65,7 +60,6 @@ class ReviewController extends Controller
                 return new PostReviewIndexResource($review);
             } else {
 
-                return 'nie sukces';
                 // return redirect('/contact')->with('error', 'Spróbuj ponownie');
             }
         } else {

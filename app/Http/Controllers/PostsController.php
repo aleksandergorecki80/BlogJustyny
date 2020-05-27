@@ -201,6 +201,7 @@ class PostsController extends Controller
     {
         // Delete post
         $post = Post::find($id);
+        $post->reviews()->delete();
         $post->delete();
         return redirect('/home')->with('success', 'Post deleted');
     }

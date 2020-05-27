@@ -179,6 +179,16 @@ class CategoryController extends Controller
     {
         // Delete category
         $category = Category::find($id);
+        $posts = Category::find($id)->posts;
+
+        
+        // dd($posts);
+        foreach($posts as $post){
+            $post->reviews()->delete();
+        }
+
+        
+        $category->posts()->delete();
         $category->delete();
         return redirect('/category')->with('success', 'Category deleted');
     }
