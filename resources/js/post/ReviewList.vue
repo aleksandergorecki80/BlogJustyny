@@ -10,7 +10,7 @@
                 <div class="row pt-4">
                     <div class="col-md-6">Imie i nazwisko</div>
                     <div class="col-md-6 d-flex justify-content-end">
-                        <StarRating v-bind:value="review.rating"></StarRating>
+                        <StarRating v-bind:value="Integer.parseInt(review.rating)"></StarRating>
                     </div>
                 </div>
                 <div class="row">
