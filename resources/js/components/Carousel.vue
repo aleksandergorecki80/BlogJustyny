@@ -36,7 +36,7 @@
         <div class="carousel-item">
           <img
             class="d-block w-100"
-            src="/storage/slider_images/torty_1588132191.jpg"
+            src="/storage/slider_images/babeczki.jpg"
             alt="Third slide"
           />
           <router-link to="categories/3">

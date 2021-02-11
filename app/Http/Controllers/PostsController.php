@@ -71,7 +71,7 @@ class PostsController extends Controller
             'title' => 'required',
             'summary' => 'required|max:191',
             'body' => 'required',
-            'ingredients' => 'ingredients',
+            'ingredients' => 'required',
             'cover_image' => 'image|nullable|max:1999'
         ]);
 

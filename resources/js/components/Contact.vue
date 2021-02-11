@@ -12,7 +12,7 @@
             v-model="contactMessage.name"
             placeholder="Name"
             name="name"
-            id="email"
+            id="name"
             v-bind:class="[{'is-invalid' : errorFor('name')}]"
           />
 
@@ -46,7 +46,7 @@
           <label for="content">Treść</label>
           <textarea
             name="content"
-            id
+            id = "content"
             cols="30"
             rows="10"
             class="form-control"
@@ -97,8 +97,8 @@ export default {
         name: "",
         content: ""
       },
-      // sitekey: "6Lf36_UUAAAAAPMgukyH86oxa4i-xSA8QOOVy2F5",  // prod
-      sitekey: "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI",  // devv
+      sitekey: "6Lf36_UUAAAAAPMgukyH86oxa4i-xSA8QOOVy2F5",  // prod
+      // sitekey: "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI",  // devv
       sending: null,
       sucessfulServerResponse: "",
       information: "Your message has been sent.",

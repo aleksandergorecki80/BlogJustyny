@@ -44,7 +44,7 @@ class SendContactForm extends Controller
             $response = $client->request('POST', 'siteverify', [
                 'query' => [
                 // 'secret' => env('CAPTCHA_SECRET'),
-                'secret' => '6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe',
+                'secret' => '6Lf36_UUAAAAAEIun3YX9y9rMmRQ73dm0BlyYJUN',
                 'response' => $token]]);
     
                 

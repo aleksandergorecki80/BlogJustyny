@@ -33,6 +33,7 @@
                     <div class="dashboard-table">
                         <h3>Your posts.</h3>
                         @if(count($posts)>0)
+                       
                         <table>
                                 @foreach ($posts as $post)
                                     <tr>

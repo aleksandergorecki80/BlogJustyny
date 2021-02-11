@@ -11,7 +11,6 @@ export default {
     postId: Number
   },
   created() {
-    console.log(this.$route.path);
     setTimeout(() => {
       this.$route.path === "/contact"
         ? this.$router.push({ name: "home", params: "" })
