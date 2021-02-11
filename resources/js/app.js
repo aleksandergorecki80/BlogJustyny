@@ -30,9 +30,3 @@ const app = new Vue({
         "my-nav": myNav
     }
 });
-
-// if (jQuery) {
-//     alert("jquery is loaded");
-// } else {
-//     alert("Not loaded");
-// }

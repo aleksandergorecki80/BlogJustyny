@@ -89,10 +89,6 @@ export default {
         this.loading = false;
       });
   },
-
-  // beforeMount(){
-  //     console.log('before mount');
-  // },
   mounted() {
     this.id = null;
     this.$nextTick(function() {
@@ -101,12 +97,5 @@ export default {
       this.getWindowWidth();
     });
   }
-
-  // beforeDestroy(){
-  //     console.log('before destroy');
-  // },
-  // destroyed(){
-  //     console.log('destroyed');
-  // }
 };
 </script>

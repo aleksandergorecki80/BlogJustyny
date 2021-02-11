@@ -10,7 +10,7 @@
                 <div class="row pt-4">
                     <div class="col-md-6">Imie i nazwisko</div>
                     <div class="col-md-6 d-flex justify-content-end">
-                        <StarRating v-bind:value="Integer.parseInt(review.rating)"></StarRating>
+                        <StarRating v-bind:value="review.rating"></StarRating>
                     </div>
                 </div>
                 <div class="row">
@@ -37,7 +37,7 @@ export default {
     created() {
         this.loading = true;
         axios.get(`/api/posts/${this.postId}/reviews`)
-            .then(response =>(this.reviews = response.data.data))
+            .then(response =>(this.reviews = Integer.parseInt(response.data.data)))
             .then(this.loading = false);
                         
 

@@ -24,12 +24,9 @@ export default {
             return fraction >  3 && fraction < 7;
         },
         fullStars(){
-            // > 4.5 = 5 stars
-            // 4.3 = 4 and half
             return Math.round(this.value);
         },
         emptyStars(){
-            // if rating gives 1.9 ceil(1.9) =2,,,, 5-2=3 empty stars
             return 5 - Math.ceil(this.value);
         },
     },

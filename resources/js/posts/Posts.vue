@@ -64,27 +64,11 @@ export default {
   },
   created() {
     this.loading = true;
-
-    //      ------  PROMISE EXAMPLE
-    // const promise = new Promise((resolve, reject)=>{
-    //     // console.log(resolve);
-    //     // console.log(reject);
-    //     setTimeout(() => resolve('hello'), 3000);
-    // })
-    // .then((result) => `Hello again ${result} `)
-    // .then((result) => {console.log(`Success ${result}`)})
-    // .catch((result) =>{console.log(`Error ${result}`)});
-    // console.log(promise);
-
     const request = axios.get("/api/posts").then(response => {
       this.posts = response.data.data;
       this.loading = false;
     });
   },
-
-  // beforeMount(){
-  //     console.log('before mount');
-  // },
   mounted() {
     this.$nextTick(function() {
         window.addEventListener("resize", this.getWindowWidth);
@@ -94,9 +78,6 @@ export default {
   },
   beforeDestroy(){
       window.removeEventListener('resize', this.getWindowWidth);
-  },
-  // destroyed(){
-  //     console.log('destroyed');
-  // }
+  }
 };
 </script>
