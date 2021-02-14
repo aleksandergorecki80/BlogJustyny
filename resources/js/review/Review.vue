@@ -57,8 +57,7 @@ export default {
         content: null,
         post_id: this.$route.params.id
       },
-      // sitekey: "6Lf36_UUAAAAAPMgukyH86oxa4i-xSA8QOOVy2F5",    // prod
-      sitekey: "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI",  // dev
+      sitekey: process.env.MIX_VUE_APP_CAPTCHA_KEY_PROD,
       errors: null,
       sending: false,
       success: false,

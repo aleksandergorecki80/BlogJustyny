@@ -83,7 +83,6 @@
 <script>
 import VueRecaptcha from "vue-recaptcha";
 import validationErrors from "./../sheard/mixins/validationErrors";
-import { is422 } from "./../sheard/utility/response";
 
 export default {
   mixins: [validationErrors],
@@ -97,8 +96,7 @@ export default {
         name: "",
         content: ""
       },
-      sitekey: "6Lf36_UUAAAAAPMgukyH86oxa4i-xSA8QOOVy2F5",  // prod
-      // sitekey: "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI",  // devv
+      sitekey: process.env.MIX_VUE_APP_CAPTCHA_KEY_PROD,  // prod
       sending: null,
       sucessfulServerResponse: "",
       information: "Your message has been sent.",
