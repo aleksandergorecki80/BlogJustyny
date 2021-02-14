@@ -43,7 +43,7 @@ class ReviewController extends Controller
 
             $response = $client->request('POST', 'siteverify', [
                 'query' => [
-                    'secret' => '6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe',
+                    'secret' => env('CAPTCHA_SECRET_PROD'),
                     'response' => $token
                 ]
             ]);

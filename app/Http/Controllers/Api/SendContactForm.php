@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 
 use GuzzleHttp\Client;
 
+
+
 class SendContactForm extends Controller
 {
     /**
@@ -43,8 +45,8 @@ class SendContactForm extends Controller
     
             $response = $client->request('POST', 'siteverify', [
                 'query' => [
-                // 'secret' => env('CAPTCHA_SECRET'),
-                'secret' => '6Lf36_UUAAAAAEIun3YX9y9rMmRQ73dm0BlyYJUN',
+                'secret' => env('CAPTCHA_SECRET_PROD'),
+                
                 'response' => $token]]);
     
                 
